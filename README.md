@@ -1,5 +1,3 @@
-# https://drive.google.com/file/d/0BwBZXnCzkLbadXZQbXFWWEo2LW8/view?usp=sharing
-
 # JavaScript-framework-jQuery-I #
 
 jQuery é um framework JavaScript que ajuda a nós desenvolvedores e programadores a escrever menos código melhorando nossa produtividade, mais legível melhorando a manutenibilidade, mais limpo e com maior compatibilidade entre os navegadores, neste projeto aplicamos os conceitos iniciais e básicos desta framework em um projeto simples!
