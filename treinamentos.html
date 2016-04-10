@@ -1,0 +1,49 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Introdução ao jQuery</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="container">
+    <h1>Treinamentos</h1>
+    <ul id="lista">
+        <li>Lógica de Programação</li>
+        <li>Dando os primeiros passos na web com HTML e CSS</li>
+        <li>Banco de dados e SQL</li>
+        <li>Ruby on Rails: do zero com deploy</li>
+        <li>NodeJS e Socket I/O</li>
+    </ul>
+    <label>Novo treinamento:</label>
+    <input id="treinamento">
+    <input id="botao-adiciona" type="button" value="adicionar"/>
+	 <input id="botao-atualiza" type="button" value="Atualizar"/>
+    <script src="js/jquery.js"></script>
+    <script>
+		$('#lista').on('dblclick','li',function(){
+		  $(this).animate({'margin-left' : '+=500'},function(){
+			$(this).remove();			  
+		  });
+		});
+		
+        $('#botao-adiciona').click(function(){
+			var treinamento = $('#treinamento');
+			var texto = treinamento.val();
+			treinamento.val('');
+			$('<li>').text(texto).css({'color' : 'rgb(200,50,50)' , 'background-color' : 'rgb(200,200,200)'}).appendTo('#lista');
+			treinamento.focus();
+		});
+		
+$('#botao-atualiza').click(function(){
+    $.get('http://mirrorfashion.caelum.com.br/treinamentos', function(retorno) {
+               $.each(retorno.treinamentos, function() {
+                  var treinamento = this;
+                  $('<li>').text(treinamento.nome).css('color', 'green').appendTo('#lista');
+               });
+            }
+, 'jsonp'
+);
+});
+    </script>
+</body>
+</html>
