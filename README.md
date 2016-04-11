@@ -1,3 +1,5 @@
+![jQuery Logo](http://renanslopes8.com.br/projetosgit/readme-img/jquery_logo.png)
+
 # JavaScript-framework-jQuery-I #
 
 jQuery é um framework JavaScript que ajuda a nós desenvolvedores e programadores a escrever menos código melhorando nossa produtividade, mais legível melhorando a manutenibilidade, mais limpo e com maior compatibilidade entre os navegadores.
